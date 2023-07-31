@@ -1,3 +1,4 @@
+using FoodAPI.DAL;
 using FoodAPI.DbContexts;
 using FoodAPI.Entities;
 using FoodAPI.Services;
@@ -20,7 +21,8 @@ builder.Services.AddDbContext<FoodContext>(dbContextOptions =>
 });
 
 builder.Services.AddTransient<DataSeeder>();
-builder.Services.AddScoped<IFoodRepository, FoodRepository>();
+
+builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
 var app = builder.Build();
 
