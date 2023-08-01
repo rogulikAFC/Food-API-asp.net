@@ -136,3 +136,5 @@ C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\obj\Debug\ne
 C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\obj\Debug\net7.0\FoodAPI.pdb
 C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\obj\Debug\net7.0\FoodAPI.genruntimeconfig.cache
 C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\obj\Debug\net7.0\ref\FoodAPI.dll
+C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\bin\Debug\net7.0\AutoMapper.dll
+C:\Users\malvl\OneDrive\Desktop\programing\Food-API-asp.net\FoodAPI\bin\Debug\net7.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll

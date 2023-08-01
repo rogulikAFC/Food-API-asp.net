@@ -24,6 +24,8 @@ builder.Services.AddTransient<DataSeeder>();
 
 builder.Services.AddTransient<IUnitOfWork, UnitOfWork>();
 
+builder.Services.AddAutoMapper(typeof(Program));
+
 var app = builder.Build();
 
 if (args.Length == 1 && args[0].ToLower() == "seeddata")

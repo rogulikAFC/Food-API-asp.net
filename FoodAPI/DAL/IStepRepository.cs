@@ -4,6 +4,6 @@ namespace FoodAPI.DAL
 {
     public interface IStepRepository : IGenericRepository<Step>
     {
-        void AddStep(Guid dishId, Step step);
+        Task AddStepAsync(Guid dishId, Step step);
     }
 }

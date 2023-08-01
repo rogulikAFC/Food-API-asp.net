@@ -7,7 +7,7 @@ namespace FoodAPI.DAL
     {
         public StepRepository(FoodContext foodContext) : base(foodContext) { }
 
-        public async void AddStep(Guid dishId, Step step)
+        public async Task AddStepAsync(Guid dishId, Step step)
         {
             var dish = await _foodContext.Dishes
                 .FindAsync(dishId);

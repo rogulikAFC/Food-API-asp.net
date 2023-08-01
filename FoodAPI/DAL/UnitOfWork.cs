@@ -20,7 +20,7 @@ namespace FoodAPI.DAL
             CategoriesRepository = new GenericRepository<Category>(foodContext);
         }
 
-        public async void SaveChangesAsync()
+        public async Task SaveChangesAsync()
         {
             await _foodContext.SaveChangesAsync();
         }

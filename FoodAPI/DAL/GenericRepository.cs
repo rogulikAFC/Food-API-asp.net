@@ -21,6 +21,11 @@ namespace FoodAPI.DAL
             return await _dbSet.FindAsync(id);
         }
 
+        public async Task<bool> IsExist(Guid id)
+        {
+            return await _dbSet.FindAsync(id) != null;
+        }
+
         public async Task<IEnumerable<T>> GetAll(
             int pageNum = 1, int pageSize = 5)
         {
@@ -35,12 +40,7 @@ namespace FoodAPI.DAL
             _dbSet.Add(entity);
         }
 
-        public void Update(T entity)
-        {
-            _dbSet.Update(entity);
-        }
-
-        public async void Delete(Guid id)
+        public async Task DeleteAsync(Guid id)
         {
             var entity = await _dbSet.FindAsync(id);
 
