@@ -2,8 +2,8 @@
 {
     public interface IGenericRepository<T> where T : class
     {
-        Task<IEnumerable<T>> GetAll(int pageNum, int pageSize);
-        Task<bool> IsExist(Guid id);
+        Task<IEnumerable<T>> GetAllAsync(int pageNum, int pageSize);
+        Task<bool> IsExistAsync(Guid id);
         Task<T?> GetByIdAsync(Guid id);
         void Add(T entity);
         Task DeleteAsync(Guid id);

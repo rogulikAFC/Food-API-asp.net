@@ -44,7 +44,7 @@ namespace FoodAPI.Controllers
 
             var isDishExists = await _unitOfWork
                 .DishesRepository
-                .IsExist(dishId);
+                .IsExistAsync(dishId);
 
             if (!isDishExists)
             {
@@ -91,7 +91,7 @@ namespace FoodAPI.Controllers
         {
             var isStepExists = await _unitOfWork
                 .StepsRepository
-                .IsExist(id);
+                .IsExistAsync(id);
 
             if (!isStepExists) 
             {

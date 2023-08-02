@@ -21,12 +21,12 @@ namespace FoodAPI.DAL
             return await _dbSet.FindAsync(id);
         }
 
-        public async Task<bool> IsExist(Guid id)
+        public async Task<bool> IsExistAsync(Guid id)
         {
             return await _dbSet.FindAsync(id) != null;
         }
 
-        public async Task<IEnumerable<T>> GetAll(
+        public async Task<IEnumerable<T>> GetAllAsync(
             int pageNum = 1, int pageSize = 5)
         {
             return await _dbSet
