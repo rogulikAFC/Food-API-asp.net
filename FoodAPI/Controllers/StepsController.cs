@@ -51,9 +51,12 @@ namespace FoodAPI.Controllers
                 return NotFound(nameof(dishId));
             }
 
-            await _unitOfWork
+            if (!await _unitOfWork
                 .StepsRepository
-                .AddStepAsync(dishId, stepEntity);
+                .AddStepAsync(stepEntity))
+            {
+                return NotFound();
+            }
 
             await _unitOfWork.SaveChangesAsync();
 

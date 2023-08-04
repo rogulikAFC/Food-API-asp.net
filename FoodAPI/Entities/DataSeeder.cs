@@ -1,4 +1,5 @@
 ﻿using FoodAPI.DbContexts;
+using Microsoft.AspNetCore.Mvc;
 
 namespace FoodAPI.Entities
 {
@@ -48,7 +49,7 @@ namespace FoodAPI.Entities
                         Id = Guid.NewGuid(),
                         Name = "Pizza",
                         Description = "Lorem ipsum pizza dorem",
-                        Recipe = new List<Step>()
+                        /* Recipe = new List<Step>()
                         {
                             new Step()
                             {
@@ -64,15 +65,15 @@ namespace FoodAPI.Entities
                                 Id = Guid.NewGuid(),
                                 Text = "Step 3"
                             },
-                        },
-                        CategoryId = new Guid("A2D77B5C-D09F-4E5A-9313-8CCCCB7BF5E3")
+                        }, */
+                        CategoryId = new Guid("0B823D5D-483B-4F79-BDA9-ACB9F8E4AA23")
                     },
                     new Dish()
                     {
                         Id = Guid.NewGuid(),
                         Name = "Spagetti",
                         Description = "Lorem ipsum Spagetti dorem",
-                        Recipe = new List<Step>()
+                        /* Recipe = new List<Step>()
                         {
                             new Step()
                             {
@@ -88,15 +89,15 @@ namespace FoodAPI.Entities
                                 Id = Guid.NewGuid(),
                                 Text = "Step 3"
                             },
-                        },
-                        CategoryId = new Guid("E5D5CFAA-19EB-4D9E-88C6-1F293C2E3062")
+                        }, */
+                        CategoryId = new Guid("0B823D5D-483B-4F79-BDA9-ACB9F8E4AA23")
                     },
                     new Dish()
                     {
                         Id = Guid.NewGuid(),
                         Name = "Cheese",
                         Description = "Lorem ipsum cheese dorem",
-                        Recipe = new List<Step>()
+                        /* Recipe = new List<Step>()
                         {
                             new Step()
                             {
@@ -112,12 +113,108 @@ namespace FoodAPI.Entities
                                 Id = Guid.NewGuid(),
                                 Text = "Step 3"
                             },
-                        },
-                        CategoryId = new Guid("99335D66-5505-4196-BF2E-EAD926AD40FF")
+                        }, */
+                        CategoryId = new Guid("D306A61C-B6A3-46F1-9DCD-0D9871CFF0BE")
                     }
                 };
 
                 _foodContext.Dishes.AddRange(dishes);
+                _foodContext.SaveChanges();
+            }
+
+            if (!_foodContext.Steps.Any())
+            {
+                var steps = new List<Step>()
+                {
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 1",
+                         DishId = new Guid("506125BE-0012-436D-AD12-DC898C0A294F"),
+                         SerialNumber = 1
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 2",
+                         DishId = new Guid("506125BE-0012-436D-AD12-DC898C0A294F"),
+                         SerialNumber = 2
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 3",
+                         DishId = new Guid("506125BE-0012-436D-AD12-DC898C0A294F"),
+                         SerialNumber = 3
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 4",
+                         DishId = new Guid("506125BE-0012-436D-AD12-DC898C0A294F"),
+                         SerialNumber = 4
+                     },
+
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 1",
+                         DishId = new Guid("7800BE7D-1E71-47AA-943F-F73A0F568B1D"),
+                         SerialNumber = 1
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 2",
+                         DishId = new Guid("7800BE7D-1E71-47AA-943F-F73A0F568B1D"),
+                         SerialNumber = 2
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 3",
+                         DishId = new Guid("7800BE7D-1E71-47AA-943F-F73A0F568B1D"),
+                         SerialNumber = 3
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 4",
+                         DishId = new Guid("7800BE7D-1E71-47AA-943F-F73A0F568B1D"),
+                         SerialNumber = 4
+                     },
+
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 1",
+                         DishId = new Guid("84EF128C-319E-4638-8790-FD5FE96734A6"),
+                         SerialNumber = 1
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 2",
+                         DishId = new Guid("84EF128C-319E-4638-8790-FD5FE96734A6"),
+                         SerialNumber = 2
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 3",
+                         DishId = new Guid("84EF128C-319E-4638-8790-FD5FE96734A6"),
+                         SerialNumber = 3
+                     },
+                     new Step()
+                     {
+                         Id = Guid.NewGuid(),
+                         Text = "Step 4",
+                         DishId = new Guid("84EF128C-319E-4638-8790-FD5FE96734A6"),
+                         SerialNumber = 4
+                     },
+                };
+
+                _foodContext.Steps.AddRange(steps);
                 _foodContext.SaveChanges();
             }
         }

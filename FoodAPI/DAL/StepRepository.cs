@@ -1,5 +1,6 @@
 ﻿using FoodAPI.DbContexts;
 using FoodAPI.Entities;
+using Microsoft.EntityFrameworkCore;
 
 namespace FoodAPI.DAL
 {
@@ -7,17 +8,28 @@ namespace FoodAPI.DAL
     {
         public StepRepository(FoodContext foodContext) : base(foodContext) { }
 
-        public async Task AddStepAsync(Guid dishId, Step step)
+        public async Task<bool> AddStepAsync(Step entity)
         {
-            var dish = await _foodContext.Dishes
-                .FindAsync(dishId);
+            var dish = await _foodContext
+                .Dishes
+                .Where(d => d.Id == entity.DishId)
+                .Include(d => d.Recipe)
+                .FirstAsync();
 
             if (dish == null)
             {
-                return;
+                return false;
             }
 
-            dish.Recipe.Add(step);
+            var maxSerialNumber = dish
+                .Recipe
+                .Max(s => s.SerialNumber);
+
+            entity.SerialNumber = maxSerialNumber++;
+            
+            base.Add(entity);
+
+            return true;
         }
     }
 }

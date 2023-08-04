@@ -11,6 +11,7 @@ namespace FoodAPI.Profiles
             CreateMap<Category, CategoryDto>();
             CreateMap<CategoryForCreateDto, Category>();
             CreateMap<CategoryForUpdateDto, Category>();
+            CreateMap<Category, CategoryForDishDto>();
         }
     }
 }

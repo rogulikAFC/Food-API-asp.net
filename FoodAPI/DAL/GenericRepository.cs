@@ -16,7 +16,7 @@ namespace FoodAPI.DAL
             _dbSet = _foodContext.Set<T>();
         }
 
-        public async Task<T?> GetByIdAsync(Guid id)
+        public async virtual Task<T?> GetByIdAsync(Guid id)
         {
             return await _dbSet.FindAsync(id);
         }
@@ -26,7 +26,7 @@ namespace FoodAPI.DAL
             return await _dbSet.FindAsync(id) != null;
         }
 
-        public async Task<IEnumerable<T>> GetAllAsync(
+        public async virtual Task<IEnumerable<T>> GetAllAsync(
             int pageNum = 1, int pageSize = 5)
         {
             return await _dbSet
@@ -35,7 +35,7 @@ namespace FoodAPI.DAL
                 .ToListAsync();
         }
 
-        public void Add(T entity)
+        public virtual void Add(T entity)
         {
             _dbSet.Add(entity);
         }

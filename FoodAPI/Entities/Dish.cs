@@ -12,12 +12,15 @@ namespace FoodAPI.Entities
         [Required]
         public string Name { get; set; } = null!;
 
-        public string Description { get; set; } = string.Empty;
+        public string? Description { get; set; }
 
-        [ForeignKey("Category")]
-        public Guid CategoryId { get; set; }
+        public Guid? CategoryId { get; set; }
 
-        [Required]
+        public Category? Category { get; set; }
+
+        // [Required]
+        // public virtual ICollection<Step> Recipe { get; set; } = new List<Step>();
+
         public virtual ICollection<Step> Recipe { get; set; } = new List<Step>();
     }
 }

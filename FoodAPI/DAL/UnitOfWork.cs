@@ -15,9 +15,9 @@ namespace FoodAPI.DAL
             _foodContext = foodContext
                 ?? throw new ArgumentNullException(nameof(foodContext));
 
-            DishesRepository = new GenericRepository<Dish>(foodContext);
+            DishesRepository = new DishRepository(foodContext);
             StepsRepository = new StepRepository(foodContext);
-            CategoriesRepository = new GenericRepository<Category>(foodContext);
+            CategoriesRepository = new CategoryRepository(foodContext);
         }
 
         public async Task SaveChangesAsync()
