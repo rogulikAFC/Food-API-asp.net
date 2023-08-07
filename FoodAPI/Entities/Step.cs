@@ -12,8 +12,6 @@ namespace FoodAPI.Entities
         [Required]
         public string Text { get; set; } = null!;
 
-        // public virtual ICollection<Dish> Dishes { get; set; } = new List<Dish>();
-
         public int SerialNumber { get; set; } = 0;
 
         [Required]

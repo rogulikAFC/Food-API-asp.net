@@ -49,23 +49,6 @@ namespace FoodAPI.Entities
                         Id = Guid.NewGuid(),
                         Name = "Pizza",
                         Description = "Lorem ipsum pizza dorem",
-                        /* Recipe = new List<Step>()
-                        {
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 1"
-                            },
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 2"
-                            },new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 3"
-                            },
-                        }, */
                         CategoryId = new Guid("0B823D5D-483B-4F79-BDA9-ACB9F8E4AA23")
                     },
                     new Dish()
@@ -73,23 +56,6 @@ namespace FoodAPI.Entities
                         Id = Guid.NewGuid(),
                         Name = "Spagetti",
                         Description = "Lorem ipsum Spagetti dorem",
-                        /* Recipe = new List<Step>()
-                        {
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 1"
-                            },
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 2"
-                            },new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 3"
-                            },
-                        }, */
                         CategoryId = new Guid("0B823D5D-483B-4F79-BDA9-ACB9F8E4AA23")
                     },
                     new Dish()
@@ -97,23 +63,6 @@ namespace FoodAPI.Entities
                         Id = Guid.NewGuid(),
                         Name = "Cheese",
                         Description = "Lorem ipsum cheese dorem",
-                        /* Recipe = new List<Step>()
-                        {
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 1"
-                            },
-                            new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 2"
-                            },new Step()
-                            {
-                                Id = Guid.NewGuid(),
-                                Text = "Step 3"
-                            },
-                        }, */
                         CategoryId = new Guid("D306A61C-B6A3-46F1-9DCD-0D9871CFF0BE")
                     }
                 };

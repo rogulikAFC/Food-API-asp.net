@@ -18,9 +18,6 @@ namespace FoodAPI.Entities
 
         public Category? Category { get; set; }
 
-        // [Required]
-        // public virtual ICollection<Step> Recipe { get; set; } = new List<Step>();
-
         public virtual ICollection<Step> Recipe { get; set; } = new List<Step>();
     }
 }
